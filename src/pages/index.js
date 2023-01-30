@@ -1,9 +1,24 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import Picture from "../assets/wallhaven.jpg";
+import Picture2 from "../assets/wallhaven-2.png";
+import Books from "../assets/books.jpg";
+import Child from "../assets/child.jpg"
+import Dunes from "../assets/dunes.jpg"
+import Elephants from "../assets/elephants.jpg"
+import Fern from "../assets/fern.jpg"
+import Flower from "../assets/flower.jpg"
+import Girl from "../assets/girl.jpg"
+import Mountain from "../assets/mountain.jpg"
+import Mountains from "../assets/mountains.jpg"
+import Ocean from "../assets/ocean.jpg"
+import Street from "../assets/street.jpg"
+import Winter from "../assets/winter.jpg"
+import Footer from "@/components/footer";
 
-const inter = Inter({ subsets: ['latin'] })
+import {
+  AiOutlineSearch,
+} from "react-icons/ai";
 
 export default function Home() {
   return (
@@ -14,110 +29,110 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.js</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+      <main>
+        <div className="whole">
+          <div className="topMenu">
+            <nav>
+              <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Browse</li>
+                <li>Links</li>
+                <li>Contact</li>
+              </ul>
+            </nav>
+            <div className="sideMenu">
+              <form>
+                <input type="text" placeholder="Search..." />
+                <AiOutlineSearch size={20} id="searchIcon" />
+              </form>
+              <button id="signup">Sign Up</button>
+              <button id="login">Login</button>
+            </div>
           </div>
-        </div>
+          <div className="mainGrid">
+            <div className="card">
+              <Image src={Books} className="thumbnail" />
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
+              <content>
+                <h1>Some title</h1>
+                <p>
+                  "Neque porro quisquam est qui dolorem ipsum quia dolor sit
+                  amet, consectetur, adipisci velit..."
+                </p>
+                <span>Author</span>
+              </content>
+            </div>
+            <div className="card">
+              <Image src={Child} className="thumbnail" />
+
+              <content>
+                <h1>Some title</h1>
+                <p>sdfsdafcasdfcasdcvbnnnnnn sdfg da dsfg sdf gsdf </p>
+                <span>Author</span>
+              </content>
+            </div>
+            <div className="card">
+              <Image src={Dunes} className="thumbnail" />
+
+              <content>
+                <h1>Some title</h1>
+                <p>Description</p>
+                <span>Author</span>
+              </content>
+            </div>
+            <div className="card">
+              <Image src={Elephants} className="thumbnail" />
+
+              <content>
+                <h1>Some title</h1>
+                <p>Description</p>
+                <span>Author</span>
+              </content>
+            </div>
+            <div className="card">
+              <Image src={Fern} className="thumbnail" />
+
+              <content>
+                <h1>Some title</h1>
+                <p>
+                  "Neque porro quisquam est qui dolorem ipsum quia dolor sit
+                  amet, consectetur, adipisci velit..."
+                </p>
+                <span>Author</span>
+              </content>
+            </div>
+            <div className="card">
+              <Image src={Street} className="thumbnail" />
+
+              <content>
+                <h1>Some title</h1>
+                <p>sdfsdafcasdfcasdcvbnnnnnn sdfg da dsfg sdf gsdf </p>
+                <span>Author</span>
+              </content>
+            </div>
+            <div className="card">
+              <Image src={Flower} className="thumbnail" />
+
+              <content>
+                <h1>Some title</h1>
+                <p>Description</p>
+                <span>Author</span>
+              </content>
+            </div>
+            <div className="card">
+              <Image src={Girl} className="thumbnail" />
+
+              <content>
+                <h1>Some title</h1>
+                <p>Description</p>
+                <span>Author</span>
+              </content>
+            </div>
           </div>
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
         </div>
       </main>
+      <Footer/>
     </>
-  )
+  );
 }
