@@ -8,6 +8,7 @@ import {
 
 const Footer = () => {
   return (
+    <footer id="footer">
     <div className="footer">
       <div className="socials">
         <AiOutlineInstagram size={30} />
@@ -50,6 +51,7 @@ const Footer = () => {
         Copyright © 2023 Michal Kielbasa. All rights reserved.
       </div>
     </div>
+    </footer>
   );
 };
 

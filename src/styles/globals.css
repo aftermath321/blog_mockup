@@ -4,13 +4,19 @@ body {
   font-family: "Roboto", sans-serif;
   margin :0px;
   -webkit-font-smoothing: antialiased;
-  flex-direction: column;
-  flex-grow: 1;
+  display: flex;
+  flex-flow: column;
   min-height: 100vh;
+}
+main{
+  flex-grow: 1;
 }
 
 /* Nav Menu */
-
+#header {
+  position: sticky;
+  z-index: 50;
+}
 .topMenu {
   z-index: 50;
   width: 100vw;
@@ -100,7 +106,6 @@ body {
 
 .mainGrid {
   width: 90vw;
-  height: 80vh;
   margin: 1% auto;
 
   display: grid;
@@ -218,7 +223,6 @@ body {
   grid-template-rows: auto;
   grid-gap: 10px;
 
-  position:relative;
   bottom: 0%;
   left: 0;
   margin: auto 0;

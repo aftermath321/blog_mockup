@@ -15,10 +15,9 @@ import Ocean from "../assets/ocean.jpg"
 import Street from "../assets/street.jpg"
 import Winter from "../assets/winter.jpg"
 import Footer from "@/components/footer";
+import Header from "@/components/header";
 
-import {
-  AiOutlineSearch,
-} from "react-icons/ai";
+
 
 export default function Home() {
   return (
@@ -29,27 +28,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header />
+
       <main>
-        <div className="whole">
-          <div className="topMenu">
-            <nav>
-              <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Browse</li>
-                <li>Links</li>
-                <li>Contact</li>
-              </ul>
-            </nav>
-            <div className="sideMenu">
-              <form>
-                <input type="text" placeholder="Search..." />
-                <AiOutlineSearch size={20} id="searchIcon" />
-              </form>
-              <button id="signup">Sign Up</button>
-              <button id="login">Login</button>
-            </div>
-          </div>
+          
           <div className="mainGrid">
             <div className="card">
               <Image src={Books} className="thumbnail" />
@@ -130,9 +112,12 @@ export default function Home() {
               </content>
             </div>
           </div>
-        </div>
+          {/* Main grid */}
+
+        
       </main>
-      <Footer/>
+      <Footer />
+
     </>
   );
 }
