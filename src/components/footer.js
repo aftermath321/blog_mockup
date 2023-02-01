@@ -10,6 +10,7 @@ const Footer = () => {
   return (
     <footer id="footer">
     <div className="footer">
+      <content>
       <div className="socials">
         <AiOutlineInstagram size={30} className="icon"/>
         <AiOutlineFacebook size={30} className="icon"/>
@@ -50,6 +51,7 @@ const Footer = () => {
       <div className="rights">
         Copyright © 2023 Michal Kielbasa. All rights reserved.
       </div>
+      </content>
     </div>
     </footer>
   );

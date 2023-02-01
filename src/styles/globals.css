@@ -21,6 +21,7 @@ main {
   top: 0%;
   max-width: 100%;
 
+
   color: #797979;
   background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 8px;
@@ -132,12 +133,12 @@ main {
   grid-gap: 20px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
   .mainGrid {
     grid-template-columns: 1fr;
   }
-  .footer {
-    grid-template-columns: 1fr;
+  .footer content{
+    grid-template-columns: none;
   }
   .socials {
     flex-direction: column;
@@ -152,24 +153,26 @@ main {
   .mobileMenu{
     display: flex;
   }
-}
-@media screen and (min-width: 500px) {
+  }
+@media screen and (min-width: 650px) {
   .mainGrid {
     grid-template-columns: 1fr 1fr;
   }
-  .footer {
+  .footer content{
     grid-template-columns: 1fr;
   }
-  
-  .mobileMenu{
+  .topMenu {
     display: none;
+  }
+  .mobileMenu{
+    display: flex;
   }
 }
 @media only screen and (min-width: 1000px) {
   .mainGrid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  .footer {
+  .footer content{
     grid-template-columns: 1fr 1fr 1fr;
   }
   .topMenu {
@@ -178,6 +181,27 @@ main {
   
   .topMenu li {
     padding: 10px;
+  }
+  .mobileMenu{
+    display: none;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .mainGrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .footer content{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .topMenu {
+    display: flex;
+  }
+  
+  .topMenu li {
+    padding: 10px;
+  }
+  .mobileMenu{
+    display: none;
   }
 }
 
@@ -243,28 +267,31 @@ main {
 .footer {
   background-color: #e8e8e8;
   color: #797979;
-  display: grid;
-  width: 100vw;
-  max-width: 100%;
+  display: flex;
+  width: 100%;
 
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-gap: 10px;
 
   bottom: 0%;
   left: 0;
   margin: auto 0;
 }
+.footer content{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-col: auto;
+  grid-gap: 10px;
+}
 
 .rights {
   font-size: 11px;
   justify-self: center;
-  column-span: 1 / span 3;
+  grid-column: -1 / 1 / -1;
 }
 .socials {
   cursor: pointer;
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   margin: 1em 0;
   gap: 20px;
