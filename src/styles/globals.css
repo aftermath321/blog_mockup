@@ -2,36 +2,52 @@ body {
   background-color: #fffff0;
   font-size: 18px;
   font-family: "Roboto", sans-serif;
-  margin :0px;
+  margin: 0px;
   -webkit-font-smoothing: antialiased;
   display: flex;
   flex-flow: column;
   min-height: 100vh;
 }
-main{
+main {
   flex-grow: 1;
 }
 
 /* Nav Menu */
-#header {
-  position: sticky;
-  z-index: 50;
-}
+
 .topMenu {
   z-index: 50;
   width: 100vw;
   height: 50px;
   top: 0%;
-  max-width:100%;
+  max-width: 100%;
 
   color: #797979;
   background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.24) 3px 3px 8px;
-  position: sticky;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
+.mobileMenu{
+  justify-content: center;
+  align-content: center;
+  position: fixed;
+  right: 5%;
+  top: 3%;
+  z-index: 50;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+
+}
+#burgerIcon{
+  margin: 0.5em auto;
+
+}
+
+
 
 .topMenu ul {
   font-weight: bold;
@@ -39,13 +55,13 @@ main{
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  gap: 8px;
   font-size: 1em;
-  margin: auto;
+  margin: 0.5em 0.5em 0 0;
   list-style: none;
   cursor: pointer;
 }
 .topMenu li {
-  padding: 5px;
   transition: 200ms;
 }
 .topMenu li:hover {
@@ -102,6 +118,7 @@ main{
   margin: auto;
 }
 
+
 /* Grid */
 
 .mainGrid {
@@ -122,8 +139,18 @@ main{
   .footer {
     grid-template-columns: 1fr;
   }
-  .socials{
+  .socials {
     flex-direction: column;
+    align-items: center;  
+  }
+  .rights{
+    text-align: center;
+  }
+  .topMenu {
+    display: none;
+  }
+  .mobileMenu{
+    display: flex;
   }
 }
 @media screen and (min-width: 500px) {
@@ -134,7 +161,9 @@ main{
     grid-template-columns: 1fr;
   }
   
-
+  .mobileMenu{
+    display: none;
+  }
 }
 @media only screen and (min-width: 1000px) {
   .mainGrid {
@@ -143,15 +172,13 @@ main{
   .footer {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .topMenu ul{
-    visibility: visible;
+  .topMenu {
+    display: flex;
   }
-  .topMenu li{
   
-  padding: 10px;
+  .topMenu li {
+    padding: 10px;
   }
-
- 
 }
 
 /* Cards */
@@ -167,6 +194,7 @@ main{
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transition: 200ms;
+  cursor: pointer;
 }
 
 .card:hover {
@@ -217,7 +245,7 @@ main{
   color: #797979;
   display: grid;
   width: 100vw;
-  max-width:100%;
+  max-width: 100%;
 
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
@@ -231,7 +259,7 @@ main{
 .rights {
   font-size: 11px;
   justify-self: center;
-  column-span: 1/span 3;
+  column-span: 1 / span 3;
 }
 .socials {
   cursor: pointer;
@@ -266,4 +294,17 @@ main{
 
 .tags a::before {
   content: "#";
+}
+.tags a:hover{
+  text-decoration: underline;
+}
+
+.icon:hover{
+  transform: scale(1.2);
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }

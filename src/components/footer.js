@@ -11,11 +11,11 @@ const Footer = () => {
     <footer id="footer">
     <div className="footer">
       <div className="socials">
-        <AiOutlineInstagram size={30} />
-        <AiOutlineFacebook size={30} />
-        <AiFillGithub size={30} />
-        <AiFillTwitterCircle size={30} />
-        <AiFillYoutube size={30} />
+        <AiOutlineInstagram size={30} className="icon"/>
+        <AiOutlineFacebook size={30} className="icon"/>
+        <AiFillGithub size={30} className="icon"/>
+        <AiFillTwitterCircle size={30} className="icon"/>
+        <AiFillYoutube size={30} className="icon"/>
       </div>
       <div className="about">
         <h1>About</h1>
