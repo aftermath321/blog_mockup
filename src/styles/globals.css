@@ -278,7 +278,7 @@ main {
 .footer content{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-col: auto;
+  grid-template-rows: auto;
   grid-gap: 10px;
 }
 
