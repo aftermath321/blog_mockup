@@ -5,7 +5,7 @@ export const MobileMenu = ({menuHandle, loginHandle}) => {
   return (
     <div className="menuTint">
           <div className="mobileMenu">
-            <RxCross2 size={50} onClick={() => menuHandle()} id="cross" />
+            <RxCross2 size={50} onClick={() => menuHandle()} className="cross" />
             <nav>
               <ul>
                 <li onClick={()=> {loginHandle(), menuHandle()}}>Login</li>

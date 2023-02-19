@@ -8,17 +8,17 @@ const LoginScreen = ({loginHandle}) => {
 
     return (
       <div className="menuTint">
-        <RxCross2 size={50} onClick={() => loginHandle()} id="cross" />
+        <RxCross2 size={50} onClick={() => loginHandle()} class="cross" />
         <div className="loginMenu">
-          <h2>Login</h2>
+          <h2>Log in to Blog</h2>
           <form>
             <input placeholder="Login"></input>
-            <input placeholder="Password"></input>
+            <input placeholder="Password"  type="password"></input>
             
-            <button onClick={(e) => e.preventDefault}>Login</button>
+            <button type="submit" onClick={(e) => e.preventDefault()}>Login</button>
           </form>
           <p>
-            Don't have an account yet? <a>Sign up!</a>
+            Don't have an account yet? <a href="/">Sign up!</a>
           </p>
           <p>Log in with:</p>
           <div className="loginIcons">
