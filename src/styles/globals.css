@@ -86,9 +86,7 @@ main {
   margin: 0.5em auto;
   color: #5d5c61;
 }
-.topMenu *{
-    box-shadow: rgba(50, 50, 50, 0.24) 0px 3px 8px;
-}
+
 .topMenu ul {
   font-weight: bold;
   display: flex;
@@ -226,11 +224,13 @@ position: relative;
   background-color:#a4a4a4;
   font-weight: bold;
   color:#F9F6EE;
+  box-shadow: rgba(50, 50, 50, 0.24) 0px 3px 8px;
   border-radius: 10px;
   padding-left: 5px;
 }
 .loginMenu input:focus{
   background-color:#999999;
+  outline-style:  none;
 }
 .loginMenu button{
   width: 50%;
