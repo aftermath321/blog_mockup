@@ -1,8 +1,8 @@
 body {
   background-color: #b1a296;
   font-size: 18px;
-  font-family: "Roboto", sans-serif;
-  margin: 0px;
+  font-family: Roboto, sans-serif;
+  margin: 0;
   -webkit-font-smoothing: antialiased;
   display: flex;
   flex-flow: column;
@@ -35,7 +35,7 @@ main {
 }
 .mobileMenu ul {
   font-size: 2em;
-  font-weight: bold;
+  font-weight: 700;
   margin: auto;
   z-index: 100;
 }
@@ -49,20 +49,19 @@ main {
   color: #f9f6ee;
   cursor: pointer;
 }
-/* Nav Menu */
 .topMenu {
   z-index: 50;
   width: 100vw;
   height: 50px;
-  top: 0%;
+  top: 0;
   max-width: 100%;
   color: #f9f6ee;
   background-color: #5d5c61;
+  box-shadow: 3px 3px 8px rgba(50, 50, 50, 0.24);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-
 .burger {
   justify-content: center;
   align-content: center;
@@ -80,8 +79,9 @@ main {
   margin: 0.5em auto;
   color: #5d5c61;
 }
+
 .topMenu ul {
-  font-weight: bold;
+  font-weight: 700;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -93,13 +93,11 @@ main {
   cursor: pointer;
 }
 .topMenu li {
-  transition: 200ms;
-  box-shadow: rgba(50, 50, 50, 0.24) 3px 3px 8px;
-
+  transition: 0.2s;
 }
-.topmenu li:hover {
+.topMenu li:hover {
   transform: translateY(-3px);
-  transition: 200ms;
+  transition: 0.2s;
 }
 .sideMenu {
   cursor: pointer;
@@ -109,13 +107,11 @@ main {
 }
 .sideMenu form {
   position: relative;
-  box-shadow: rgba(50, 50, 50, 0.24) 3px 3px 8px;
 }
 .sideMenu input {
   width: 170px;
   height: 35px;
   margin: 0.5em 2em 0 0;
-  padding-left: 1em;
   background-color: #a4a4a4;
   box-shadow: none;
   outline: none;
@@ -134,40 +130,41 @@ main {
   top: 30%;
   right: 14%;
 }
-.sidemenu input:focus {
+.sideMenu input:focus {
   outline: none;
-  background-color: #999999;
+  background-color: #999;
 }
 .sideMenu button {
   border-style: none;
-  font-weight: bold;
+  font-weight: 700;
   height: 100%;
   width: 6em;
   color: #f9f6ee;
   cursor: pointer;
-  transition: 200ms;
+  transition: 0.2s;
   border-radius: 10px;
 }
-.sidemenu button:hover {
+.sideMenu button:hover {
   transform: scale(1.1);
-  transition: 200ms;
+  transition: 0.2s;
 }
 #signup {
   background-color: #7395ae;
+}
+#login,
+#signup {
   box-shadow: rgba(50, 50, 50, 0.24) 3px 3px 8px;
 }
 #login {
   background-color: #557a95;
-  box-shadow: rgba(50, 50, 50, 0.24) 3px 3px 8px;
 }
 #searchIcon {
   margin: auto;
 }
-.sidemenu button:active {
+.sideMenu button:active {
   transform: translateY(3px);
-  transition: 200ms;
+  transition: 0.2s;
 }
-/* Login */
 .loginMenu {
   width: 300px;
   aspect-ratio: 1;
@@ -176,7 +173,6 @@ main {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: center;
   align-items: center;
   top: 10%;
   margin: auto;
@@ -193,7 +189,6 @@ main {
 }
 .loginMenu button {
   width: 4rem;
-  height: 2rem;
 }
 .loginMenu form {
   width: 100%;
@@ -208,15 +203,13 @@ main {
   height: 1.5rem;
   margin: 3%;
   background-color: #a4a4a4;
-  font-weight: bold;
+  font-weight: 700;
   color: #f9f6ee;
-  box-shadow: rgba(50, 50, 50, 0.24) 0px 3px 8px;
   border-radius: 10px;
   padding-left: 5px;
 }
-.loginmenu input:focus {
-  background-color: #999999;
-  outline-style: none;
+.loginMenu input:focus {
+  background-color: #999;
 }
 .loginMenu button {
   width: 50%;
@@ -224,30 +217,30 @@ main {
   background-color: #5d5c61;
   border-radius: 25px;
   color: #f6fcfb;
-  font-weight: bold;
-  box-shadow: rgba(50, 50, 50, 0.24) 0px 3px 8px;
-  transition: 200ms;
+  font-weight: 700;
+  box-shadow: 0 3px 8px rgba(50, 50, 50, 0.24);
+  transition: 0.2s;
 }
-.loginmenu button:hover {
-  transition: 200ms;
+.loginMenu button:hover {
+  transition: 0.2s;
   background-color: #717075;
 }
-.loginmenu button:active {
+.loginMenu button:active {
   transform: translateY(3px);
-  transition: 200ms;
+  transition: 0.2s;
 }
+.icon,
 .loginMenu input,
-button,
 a,
-.icon {
+button {
   cursor: pointer;
 }
 .loginMenu a {
-  transition: 200ms;
   color: #1956c7;
 }
-.loginmenu a:hover {
-  transition: 200ms;
+.loginMenu a,
+.loginMenu a:hover {
+  transition: 0.2s;
 }
 .loginIcons {
   display: flex;
@@ -255,7 +248,6 @@ a,
   color: #5d5c61;
   width: 70%;
 }
-/* Grid */
 .mainGrid {
   width: 90vw;
   margin: 1% auto;
@@ -303,10 +295,8 @@ a,
   }
 }
 @media only screen and (min-width: 1000px) {
+  .footer content,
   .mainGrid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .footer content {
     grid-template-columns: 1fr 1fr 1fr;
   }
   .topMenu {
@@ -336,7 +326,6 @@ a,
     display: none;
   }
 }
-/* Cards */
 .card {
   background-color: #888691;
   display: flex;
@@ -347,12 +336,12 @@ a,
   max-height: 400px;
   margin: 10px auto;
   border-radius: 10px;
-  box-shadow: rgba(50, 50, 50, 0.24) 0px 3px 8px;
-  transition: 200ms;
+  box-shadow: 0 3px 8px rgba(50, 50, 50, 0.24);
+  transition: 0.2s;
   cursor: pointer;
 }
 .card:hover {
-  transition: 200ms;
+  transition: 0.2s;
   transform: scale(1.05);
 }
 .card content {
@@ -365,15 +354,15 @@ a,
 }
 .card h1 {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
 }
 .card span {
   font-size: 13px;
   color: #f6fcfbbe;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin: auto 0 0 0;
+  margin: auto 0 0;
 }
 .card p {
   font-size: 16px;
@@ -386,13 +375,12 @@ a,
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-/* Footer */
 .footer {
   background-color: #5d5c61;
   color: #f9f6ee;
   display: flex;
   width: 100%;
-  bottom: 0%;
+  bottom: 0;
   left: 0;
   margin: auto 0;
 }
@@ -405,7 +393,7 @@ a,
 .rights {
   font-size: 11px;
   justify-self: center;
-  grid-column: -1 / 1 / -1;
+  grid-column: -1/1/-1;
 }
 .socials {
   cursor: pointer;
@@ -437,18 +425,18 @@ a,
   color: #6495ed;
   cursor: pointer;
 }
-.tags a::before {
+.tags a:before {
   content: "#";
 }
-.tagsa:hover {
+.tags a:hover {
   text-decoration: underline;
 }
-.icon {
-  transition: 200ms;
+.icon,
+.icon:hover {
+  transition: 0.2s;
 }
 .icon:hover {
   transform: scale(1.2);
-  transition: 200ms;
 }
 .sticky {
   position: -webkit-sticky;
