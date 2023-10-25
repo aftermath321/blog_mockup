@@ -58,11 +58,11 @@ main {
   max-width: 100%;
   color: #f9f6ee;
   background-color: #5d5c61;
-  box-shadow: rgba(50, 50, 50, 0.24) 3px 3px 8px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .burger {
   justify-content: center;
   align-content: center;
@@ -94,6 +94,8 @@ main {
 }
 .topMenu li {
   transition: 200ms;
+  box-shadow: rgba(50, 50, 50, 0.24) 3px 3px 8px;
+
 }
 .topmenu li:hover {
   transform: translateY(-3px);
@@ -107,6 +109,7 @@ main {
 }
 .sideMenu form {
   position: relative;
+  box-shadow: rgba(50, 50, 50, 0.24) 3px 3px 8px;
 }
 .sideMenu input {
   width: 170px;
@@ -151,11 +154,11 @@ main {
 }
 #signup {
   background-color: #7395ae;
-  box-shadow: none;
+  box-shadow: rgba(50, 50, 50, 0.24) 3px 3px 8px;
 }
 #login {
   background-color: #557a95;
-  box-shadow: none;
+  box-shadow: rgba(50, 50, 50, 0.24) 3px 3px 8px;
 }
 #searchIcon {
   margin: auto;
