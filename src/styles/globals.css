@@ -13,11 +13,10 @@ body {
 
 main {
   flex-grow: 1;
-  height: 90vh;
+  min-height: 90vh;
 }
 
 .footer {
-  position: relative;
   background-color: #5d5c61;
   color: #f9f6ee;
   display: flex;
@@ -286,7 +285,7 @@ button {
     grid-template-columns: none;
   }
   .socials {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
   .rights {
