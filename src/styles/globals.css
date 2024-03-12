@@ -260,6 +260,7 @@ button {
   .mainGrid {
     grid-template-columns: 1fr;
   }
+
   .footer content {
     grid-template-columns: none;
   }
@@ -376,6 +377,7 @@ button {
   border-top-right-radius: 10px;
 }
 .footer {
+  position: sticky;
   background-color: #5d5c61;
   color: #f9f6ee;
   display: flex;
