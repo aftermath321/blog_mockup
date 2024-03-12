@@ -1,6 +1,15 @@
-import React from 'react'
-import {Books, Child, Girl, Elephants, Fern, Flower, Street, Dunes} from '../assets/imports';
-import Card from './card';
+import React from "react";
+import {
+  Books,
+  Child,
+  Girl,
+  Elephants,
+  Fern,
+  Flower,
+  Street,
+  Dunes,
+} from "../assets/imports";
+import Card from "./card";
 
 const MainGrid = () => {
   return (
@@ -13,6 +22,7 @@ const MainGrid = () => {
           p="Here's my take on the best books published in the past
                 year!"
           author="Michal K"
+          priority={true}
         />
         <Card
           image={Girl}
@@ -32,7 +42,7 @@ const MainGrid = () => {
           image={Elephants}
           alt="elephants"
           h1="Elephants need your help!"
-          p="The fundraiser for elephant&apos;s safe haven."
+          p="The fundraiser for elephant's safe haven."
           author="Michal K"
         />
         <Card
@@ -65,9 +75,8 @@ const MainGrid = () => {
           author="Michal K"
         />
       </div>
-
     </main>
   );
-}
+};
 
-export default MainGrid
+export default MainGrid;
